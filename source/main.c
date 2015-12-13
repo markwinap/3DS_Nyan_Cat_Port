@@ -2391,6 +2391,6 @@ void audio_stop(void){
 	csndExecCmds(true);
 	CSND_SetPlayState(0x8, 0);
 	memset(buffer, 0, size);
-	GSPGPU_FlushDataCache(NULL, buffer, size);
+	GSPGPU_FlushDataCache(buffer, size);
 	linearFree(buffer);
 }
